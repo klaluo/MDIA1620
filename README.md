@@ -16,3 +16,18 @@ Anxious
 Picture of my favourite sandwich:
 > 
 ![Jeremy sandwich](https://s3-media0.fl.yelpcdn.com/bphoto/uq5yQezKonZe7nZgJAUhDA/348s.jpg)
+
+Week 3
+
+Three "aha" momments 
+1. realized there was a cheat sheet for all our shortcuts we use during class
+2. I can also use the terminal within Visual Studio Code 
+3. Easier to code in terminal in Visual Studio Code
+
+Two things that are unclear
+1. not sure what git push does
+2. not sure what commiting means 
+
+
+One word for how I am feeling 
+1. Anxious
