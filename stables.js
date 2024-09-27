@@ -22,6 +22,5 @@ console.log(false + "NaN");
 // assignment 
 let horseNickname = "Icey";
 
-console.log(`My beautiful horse's name is ${horseName} and their nickname is ${horseNickname}. `)
-console.log("3 months stay at my stable is $" + (STABLES_MONTHLY_FEE * 3))
-console.log("With a 10% discount, you would save $" + (STABLES_MONTHLY_FEE * 3)*0.1)
+console.log(`My beautiful horse's name is ${horseName} and their nickname is ${horseNickname}. `);
+console.log("3 months stay at my stable is $" + (STABLES_MONTHLY_FEE * 3) + "With a 10% discount, you would save $" + (STABLES_MONTHLY_FEE * 3)*0.1);
