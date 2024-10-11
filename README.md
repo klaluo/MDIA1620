@@ -31,3 +31,10 @@ Two things that are unclear
 
 One word for how I am feeling 
 1. Anxious
+
+Week 6 
+
+3 confusing things 
+1. still kinda confused about how to navigate git hub
+2. i dont understand Arrays
+3. i dont understand the true false things
