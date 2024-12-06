@@ -31,3 +31,10 @@ Two things that are unclear
 
 One word for how I am feeling 
 1. Anxious
+
+Week 6
+
+3 confusing things 
+1. The concept of :if true / false 
+2. navigating git hub
+3. context of javascript 
