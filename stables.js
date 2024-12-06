@@ -1,4 +1,48 @@
-let horseName = "Snowdog";  
+let horse = {}
+console.log(horse);
+let horseArray = []
+
+let horseArray = ["strawberry","shortcake", 3, true];
+let car = {
+    color: "Red"
+}
+
+
+function intro(horse)
+
+
+
+
+
+
+
+
+console.log("My horse name is called" + horse.name + "and they are")
+
+function createHorse(name, nickname, age, faveTreat, isInside) {
+    const tempObj = {};
+
+    tempObj.name = name;
+    tempObj.nickmame = nickname;
+    tempObj.age = age;
+    tempObj.faveTreat = faveTreat
+    tempObj.isInside = isInsdie; 
+    tempObj. rent + 123;
+    tempObj.intro = function () {
+        console.log(
+            `My horse is called ${this.name} and they are ${this.age} years old!`
+        )
+    }
+    return tempObj;
+}
+
+const strawberry = createHorse("Strawberry", "Shortcake", 3, "carrots", true);
+console.log(strawberry);
+
+
+
+
+/*let horseName = "Snowdog";  
 console.log[horseName];
 let horseAge = 5;
 console.log[horseAge];
@@ -85,7 +129,7 @@ if(horseLocations[2]) {
 } else {
     console.log(horseNames[2] + " is outside")
 }
-
+*/
 
 
 
