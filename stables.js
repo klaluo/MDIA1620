@@ -125,25 +125,25 @@ function calculateLatePayment(monthlyRent, latePaymentFee) {
 calculateLatePayment(snowy.monthlyRent, latePaymentFee);
 
 
-findWhoLikesTreats(toilet paper);
-for (let i = 0; i < horses.length; i++) {
-    let horse = horses[i];
-    let horseName = horse["name"];
-    let favorite = horse["favTreat"];
-    let doesLikeToiletPaper = favorite === "toilet paper";
 
-    if (doesLikeToiletPaper) {
-        console.log(`${horseName} loves toilet paper!`);
-    } else{
-        console.log(
-            `${horseName} doesn't like toilet paper, only ${favorite}, keep checking!`
-        );
+function findWhoLikesTreats(favTreat) {
+    for (let i = 0; i < horses.length; i++) {
+        let horse = horses[i];
+        let horseName = horse["name"];
+        let favorite = horse["favTreat"];
+        
+        if (favorite === horses.favTreat) {
+            console.log(`${horseName} loves ${favTreat}!`);
+        } else {
+            console.log(
+                `${horseName} doesn't like ${favTreat}, only ${favorite}, keep checking!`
+            );
+        }
     }
 }
 
-
 function getHorseNickname (horseName) {
-    for (let i = 0; i < horse.length; i++) {
+    for (let i = 0; i < horses.length; i++) {
         if (horses[i].name === horseName){
             return horses[i].nickname;
         }
@@ -182,15 +182,24 @@ function moveHorsesOutside() {
 moveHorsesOutside();
 
 
+function timeOfDay(nastyBoy, isGettingDark) {
+    if (nastyBoy.isInside && !isGettingDark) {
+        nastyBoy.isInside = false;
+        console.log(`${nastyBoy.name} has been dragged out of his cell. He needs vitamin D.`);
+    } else if (!nastyBoy.isInside && isGettingDark) {
+        nastyBoy.isInside = true;
+        console.log(`${nastyBoy.name}! the sun is setting!!! get back inside!`);
+    }
+}; 
 
 
-Horse.prototype.moveLocation = function() {
-    if (this.isInside) {
-        this.isInside = false;
-        console.log(`${this.name} has been moved outside.`);
+function nightTime(horses, isDark) {
+    if (horses.isInside && isDark) {
+        horses.isInside = false;
+        console.log(`${horses.name} has been moved outside.`);
     } else {
         this.isInside = true;
-        console.log(`${this.name} has been moved inside`);
+        console.log(`${horses.name} has been moved inside`);
     }
 };
 
@@ -211,8 +220,8 @@ function feedHorses(horses) {
 feedHorses(horses);
 
 
-horses.forEach(function(horse) {
-    horse.moveLocation();
+horses.forEach(function(horses) {
+    horses.isInside();
 });
 
 console.log("GOODNIGHT!");
