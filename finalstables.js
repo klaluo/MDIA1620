@@ -125,30 +125,33 @@ function calculateLatePayment(monthlyRent, latePaymentFee) {
 calculateLatePayment(snowy.monthlyRent, latePaymentFee);
 
 
+findWhoLikesTreats(toilet paper);
+for (let i = 0; i < horses.length; i++) {
+    let horse = horses[i];
+    let horseName = horse["name"];
+    let favorite = horse["favTreat"];
+    let doesLikeToiletPaper = favorite === "toilet paper";
 
-function findWhoLikesTreats(favTreat) {
-    for (let i = 0; i < horses.length; i++) {
-        let horse = horses[i];
-        let horseName = horse["name"];
-        let favorite = horse["favTreat"];
-        
-        if (favorite === favTreat) {
-            return(`${horseName} loves ${favTreat}!`);
-        } else {
-            console.log(
-                `${horseName} doesn't like ${favTreat}, only ${favorite}, keep checking!`
-            );
-        }
+    if (doesLikeToiletPaper) {
+        console.log(`${horseName} loves toilet paper!`);
+    } else{
+        console.log(
+            `${horseName} doesn't like toilet paper, only ${favorite}, keep checking!`
+        );
     }
 }
-console.log(findWhoLikesTreats("toilet paper"));
 
 
 function getHorseNickname (horseName) {
-    return horseName.nickname;
+    for (let i = 0; i < horse.length; i++) {
+        if (horses[i].name === horseName){
+            return horses[i].nickname;
+        }
+    }
+    return horseName.nickname
 }
 
-console.log(`My horses nickname is ${getHorseNickname(snowy)}`);
+getHorseNickname("snowy");
 
 
 
@@ -159,13 +162,13 @@ console.log(`My horses nickname is ${getHorseNickname(snowy)}`);
 function getHobby(horseName) {
     for (let i = 0; i < horses.length; i++) {
         let horse = horses[i];
-        if (horse === horseName) {
-            return(`My horse ${horse.name}'s hobby is ${horse.hobby}`);
+        if (horse.name === horseName) {
+            console.log(`My horse ${horse.name}'s hobby is to ${horse.hobby}`);
+            return;
         }
     }
 }
-console.log (getHobby(snowy));
-console.log (getHobby(muffy));
+getHobby(snowy);
 
 
 function moveHorsesOutside() {
@@ -173,24 +176,23 @@ function moveHorsesOutside() {
         horses[i].isInside = false;
         console.log(`${horses[i].name} has been moved outside to spend time in the sun.`);
     }
-    return (`All babes have been moved outside.`);
 }
-console.log(moveHorsesOutside());
+
+
+moveHorsesOutside();
 
 
 
 
-function nightTime(horses, isDark) {
-    if (horses.isInside && !isDark) {
-        horses.isInside = false;
-        console.log(`${horses.name} has been moved outside.`);
+Horse.prototype.moveLocation = function() {
+    if (this.isInside) {
+        this.isInside = false;
+        console.log(`${this.name} has been moved outside.`);
     } else {
         this.isInside = true;
-        console.log(`${horses.name} has been moved inside`);
+        console.log(`${this.name} has been moved inside`);
     }
 };
-
-console.log(nightTime(snowy, true));
 
 
 function feedHorses(horses) {
@@ -210,13 +212,12 @@ feedHorses(horses);
 
 
 horses.forEach(function(horse) {
-    horse.isInside = false; 
+    horse.moveLocation();
 });
 
-console.log("Moving babes inside for the night.");
-
-horses.forEach(function(horse) {
-    nightTime(horse, true); 
+console.log("GOODNIGHT!");
+horses.forEach(function(horses) {
+    timeOfDay(horses, true); 
 });
 
-console.log("Goodnight, horses!");
+
