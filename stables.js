@@ -220,3 +220,15 @@ horses.forEach(function(horse) {
 });
 
 console.log("Goodnight, horses!");
+
+
+
+            //       /\
+            //      /--\       cute horse with a birthday hat 
+            //     /----\
+            //    --------
+            //  /           \
+            // |            |
+            // |   9     9  |
+            // |     ..     |
+            //  -------------
